@@ -1,0 +1,257 @@
+
+body{
+  box-sizing: border-box;
+  font-family: 'Bellefair', serif;
+  font-size: 17px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.mobile_icon{
+  border: 1px solid white;
+  display: inline-block;
+  background-color: red;
+  color: white;
+  height: 25px;
+  margin-top: 28px;
+  padding: 3px;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.second_icon{
+  border: 1px solid red;
+  display: none;
+  background-color: white;
+  color: red;
+  height: 25px;
+  margin-top: 28px;
+  padding: 4px;
+  margin-left: 20px;
+
+
+}
+
+
+.contacts{
+  margin-right: 50px;
+  padding-left: 15px;
+  margin-top: 20px;
+
+
+}
+
+
+.fa-home, .fa-phone-volume, .fa-info, .fa-envelope, .fa-users, .fa-sign-in-alt, .fa-registered, .fa-address-book, .fa-bomb, .fa-address-card {
+  color: red;
+}
+
+.section-box {
+    background-color: white;
+    width: 100%;
+    bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    /* border-top: 2px solid lightgrey; */
+}
+.footer_normal{
+  background-color: white;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid lightgrey;
+  display: flex;
+
+  align-items: flex-end;
+
+
+
+}
+
+
+.contacts {
+display: inline-block;
+padding-bottom: 5px;
+margin-bottom: 5px;
+}
+.fa-facebook-square, .fa-twitter, .fa-instagram, .fa-youtube{
+  font-size: 30px;
+  padding: 0;
+}
+.fa-youtube{
+  color: #ff0000;
+}
+.fa-twitter{
+  color: #55acee;
+}
+.fa-instagram {
+  color: #c32aa3;
+}
+
+.icons {
+  display: inline-block;
+  padding-right: 15px;
+
+}
+.icons a{
+  display: inline-block;
+  margin-top: 8px;
+}
+.logo{
+  width: 200px;
+}
+.v-header{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.navbar-nav{
+  margin-left: 15%;
+}
+.container{
+  max-width: 90%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+}
+.fullscreen-video-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.fullscreen-video-wrap video{
+  min-width: 100%;
+  min-height: 100%;
+}
+.header-overlay{
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #225470;
+  z-index: 1;
+  opacity: 0.5;
+}
+.header-content{
+  z-index: 2;
+}
+.nav-link{
+  color: white !important;
+}
+.nav-link:hover{
+  color: black !important;
+  font-size: 20px;
+  border-bottom: 3px solid blue;
+  padding-bottom: 1px;
+}
+.active{
+  color: black !important;
+  font-size: 20px;
+  border-bottom: 3px solid blue;
+  padding-bottom: 1px;
+}
+.dropdown-item{
+  background-color: none !important;
+  color: white;
+}
+.dropdown-menu{
+  background: none;
+}
+.nav-position{
+  position: sticky;
+  top: 0;
+}
+nav ul{
+  display: flex;
+}
+.bg-black{
+  background: black;
+  color: white;
+}
+.bg-grey{
+  background: grey;
+  color: white
+}
+.section-container{
+  max-width: 85%;
+  padding: 10px;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+
+}
+.h1-center{
+  margin-top: 30vh;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: 0;
+  text-align: center;
+  transform: translateX(-50%)translateY(-50%);
+  color: white;
+  z-index: 10;
+}
+ul li{
+  margin-left: 20px;
+}
+
+
+
+
+/* *************************************hydraulic-structures***************/
+.body-image{
+  background-image: url(../images/bg.png);
+}
+
+.change-color{
+  color: black !important;
+}
+.bg-menu{
+    background: #69d2de;
+}
+.section-border{
+ border: 1px solid #dfe3e7;
+ border-radius: 20px;
+ margin: 2px;
+ padding: 20px 20px 0px 20px;
+}
+/* *************************************end-hydraulic-structures***************/
+.mt-25vh{
+  margin-top: 15vh;
+}
+
+/* *************************************structure***************/
+
+
+
+/* *************************************structure***************/
+
+/****************************************RESPONSIVE*****************************************************/
+/****************************************RESPONSIVE*****************************************************/
+/****************************************RESPONSIVE*****************************************************/
+/****************************************RESPONSIVE*****************************************************/
+@media (min-width: 10px) and (max-width: 575.98px) {}
+
+@media (min-width: 575.98px) and (max-width: 767px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+
+@media (min-width: 1500px) and (max-width: 1919px) {}
+
+@media (min-width: 1920px) {}

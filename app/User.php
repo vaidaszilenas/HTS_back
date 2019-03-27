@@ -15,25 +15,26 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+     protected $fillable = [
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+     ];
+     protected $attributes = [ //jei ne adminas registruojasi reik kad is admin 0 butu
+       'is_admin' => 0
+     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+     /**
+      * The attributes that should be hidden for arrays.
+      *
+      * @var array
+      */
+     protected $hidden = [
+         'password', 'remember_token',
+     ];
+     public function isAdmin(){
+       if ($this->is_admin == 1) {
+         return true;
+       }else{
+         return false;
+       }
+     }
 }
