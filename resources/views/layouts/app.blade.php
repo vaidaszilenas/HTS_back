@@ -38,16 +38,17 @@
                 Hidrotechnikos statiniai
               </a>
               <div class="dropdown-menu bg-menu">
-                <a class="dropdown-item change-color" href="#">Vilniaus apkr.</a>
+                <a class="dropdown-item change-color" href="#">Alytaus apkr.</a>
                 <a class="dropdown-item change-color" href="#">Kauno apkr.</a>
-                <a class="dropdown-item change-color" href="#">Šiaulių apkr.</a>
-                <a class="dropdown-item change-color" href="#">Panevėžio apkr.</a>
-                <a class="dropdown-item change-color" href="#">Utenos apkr.</a>
-                <a class="dropdown-item change-color" href="#">Telšių apkr.</a>
-                <a class="dropdown-item change-color" href="#">Tauragės apkr.</a>
                 <a class="dropdown-item change-color" href="#">Klaipėdos apkr.</a>
                 <a class="dropdown-item change-color" href="#">Marijampolės apkr.</a>
-                <a class="dropdown-item change-color" href="#">Alytaus apkr.</a>
+                <a class="dropdown-item change-color" href="#">Panevėžio apkr.</a>
+                <a class="dropdown-item change-color" href="#">Šiaulių apkr.</a>
+                <a class="dropdown-item change-color" href="#">Tauragės apkr.</a>
+                <a class="dropdown-item change-color" href="#">Telšių apkr.</a>
+                <a class="dropdown-item change-color" href="{{route('utena')}}">Utenos apkr.</a>
+                <a class="dropdown-item change-color" href="#">Vilniaus apkr.</a>
+
               </div>
             </li>
             <li class="nav-item">

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
      protected $fillable = [
-
+       'name', 'email', 'password'
      ];
      protected $attributes = [ //jei ne adminas registruojasi reik kad is admin 0 butu
        'is_admin' => 0
