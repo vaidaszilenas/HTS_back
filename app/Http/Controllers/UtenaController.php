@@ -75,7 +75,10 @@ class UtenaController extends Controller
      */
     public function show($id)
     {
-        //
+        $utena = Utena::findOrFail($id);
+        return view('show-structure',[
+          'utena' => $utena
+        ]);
     }
 
     /**

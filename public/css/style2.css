@@ -166,10 +166,10 @@ margin-bottom: 5px;
 .dropdown-menu{
   background: none;
 }
-.nav-position{
+/* .nav-position{
   position: sticky;
   top: 0;
-}
+} */
 nav ul{
   display: flex;
 }

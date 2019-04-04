@@ -14,9 +14,10 @@
 Route::get('/', 'BasicController@index')->name('basic');
 
 Auth::routes();
-// ->middleware('IsAdmin')
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/county-utena', 'UtenaController@index')->name('utena');
-Route::get('/create-structure', 'UtenaController@create');
-Route::post('/store', 'UtenaController@store')->name('utena-store');
+Route::get('/create-structure', 'UtenaController@create')->middleware('IsAdmin');
+Route::post('/store', 'UtenaController@store')->name('utena-store')->middleware('IsAdmin');
+Route::get('/show-structure/{id}', 'UtenaController@show')->name('hts-show');
