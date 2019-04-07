@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Utena;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Storage;
-use DB;
-use View;
+use App\Utena;
+use App\Photo;
 
-class UtenaController extends Controller
+class PhotosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +15,7 @@ class UtenaController extends Controller
      */
     public function index()
     {
-      $utena = Utena::all();
-        return view('counties/utena',[
-          'utena'=>$utena
-        ]);
+        //
     }
 
     /**
@@ -31,7 +25,7 @@ class UtenaController extends Controller
      */
     public function create()
     {
-        return view('create-structure');
+
     }
 
     /**
@@ -42,29 +36,23 @@ class UtenaController extends Controller
      */
     public function store(Request $request)
     {
+
       $validatedData = $request->validate([
-        'file_name'=>'required',
-        'pond'=>'required|min:2',
-        'small-describe'=>'required|min:10',
-        'describe'=>'required|min:10',
-        'district'=>'required'
+        'photo'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
       ]);
 
-      $path = $request->file('file_name')->storePublicly('public/images');
-      $post = [
-        'file_name'=> $path,
-        'pond'=>$request['pond'],
-        'small-describe'=>$request['small-describe'],
-        'describe'=>$request['describe'],
-        'district'=>$request['district']
 
+      $path = $request->file('photo')->storePublicly('public/images');
+      $post = [
+        'photo'=> $path,
+        'utena_id' => $request['utena_id']
       ];
       // var_dump($post);
-      Utena::create($post);
+      Photo::create($post);
       $post = $request->except('_token');
       // var_dump($post);
 
-      return redirect()->route('utena');
+      return redirect()->back();
     }
 
     /**
@@ -75,14 +63,7 @@ class UtenaController extends Controller
      */
     public function show($id)
     {
-
-      $utena = Utena::where('id', $id)->firstOrFail();
-
-      return View::make('show-structure')->with('utena', $utena);
-        // $utena = Utena::findOrFail($id);
-        // return view('show-structure',[
-        //   'utena' => $utena
-        // ]);
+        //
     }
 
     /**

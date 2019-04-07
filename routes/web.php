@@ -22,4 +22,5 @@ Route::get('/create-structure', 'UtenaController@create')->middleware('IsAdmin')
 Route::post('/store', 'UtenaController@store')->name('utena-store')->middleware('IsAdmin');
 Route::get('/show-structure/{id}', 'UtenaController@show')->name('hts-show');
 
-Route::get('/test/{id}', 'TestController@index');
+// Route::get('/test/{id}', 'TestController@index');
+Route::post('/store-photos', 'PhotosController@store')->name('photo-store');
