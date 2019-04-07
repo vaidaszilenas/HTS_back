@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPhotos extends Migration
+class AddPhoto extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,12 @@ class AddPhotos extends Migration
     public function up()
     {
       Schema::create('photos', function (Blueprint $table) {
-          $table->increments('id');
+
+          $table->engine = 'InnoDB';
+          $table->bigIncrements('id');
           $table->string('photo');
-          $table->integer('hts_structure_id')->unsigned();
-          $table->foreign('hts_structure_id')->references('id')->on('hts_structures_utena');
+          $table->integer('utena_id')->unsigned()->nullable();
+          $table->foreign('utena_id')->references('id')->on('utena')->onDelete('cascade');
           $table->timestamps();
       });
     }

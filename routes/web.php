@@ -21,3 +21,5 @@ Route::get('/county-utena', 'UtenaController@index')->name('utena');
 Route::get('/create-structure', 'UtenaController@create')->middleware('IsAdmin');
 Route::post('/store', 'UtenaController@store')->name('utena-store')->middleware('IsAdmin');
 Route::get('/show-structure/{id}', 'UtenaController@show')->name('hts-show');
+
+Route::get('/test', 'TestController@index');

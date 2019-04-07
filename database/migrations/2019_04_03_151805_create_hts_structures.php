@@ -13,7 +13,8 @@ class CreateHtsStructures extends Migration
      */
     public function up()
     {
-        Schema::create('hts_structures_utena', function (Blueprint $table) {
+        Schema::create('utena', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('pond');
             $table->text('small-describe');
@@ -31,6 +32,6 @@ class CreateHtsStructures extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hts_structures_utena');
+        Schema::dropIfExists('utena');
     }
 }

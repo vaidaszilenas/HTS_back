@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Photo;
 class Utena extends Model
 {
 
@@ -12,7 +12,7 @@ class Utena extends Model
   }
 
  protected $fillable = ['pond', 'small-describe', 'describe', 'district', 'file_name'];
- protected $table = 'hts_structures_utena';
+ protected $table = 'utena';
 
  public function getUrlAttribute()
 {
