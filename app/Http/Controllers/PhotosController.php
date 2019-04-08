@@ -37,20 +37,41 @@ class PhotosController extends Controller
     public function store(Request $request)
     {
 
-      $validatedData = $request->validate([
-        'photo'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-      ]);
+      $validatedData = $this->validate($request,[
+        'photo.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
 
+      if ($request->hasFile('photo')) {
 
-      $path = $request->file('photo')->storePublicly('public/images');
-      $post = [
-        'photo'=> $path,
-        'utena_id' => $request['utena_id']
-      ];
-      // var_dump($post);
-      Photo::create($post);
-      $post = $request->except('_token');
-      // var_dump($post);
+        foreach ($request->photo as $photo) {
+
+          $filename = $photo->getClientOriginalName();
+          $path = $photo->storeAs('public/images', $filename);
+          $post = [
+            'photo'=> $path,
+            'utena_id' => $request['utena_id']
+          ];
+          Photo::create($post);
+          $post = $request->except('_token');
+
+        }
+
+      }
+
+      // $validatedData = $request->validate([
+      //   'photo'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+      // ]);
+      //
+      //
+      // $path = $request->file('photo')->storePublicly('public/images');
+      // $post = [
+      //   'photo'=> $path,
+      //   'utena_id' => $request['utena_id']
+      // ];
+      // // var_dump($post);
+      // Photo::create($post);
+      // $post = $request->except('_token');
+      // // var_dump($post);
 
       return redirect()->back();
     }
