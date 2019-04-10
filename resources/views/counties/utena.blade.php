@@ -12,8 +12,12 @@
             <h4>{{$hts['pond']}} <br> {{$hts['district']}} raj.</h4>
             <a href="{{route('hts-show', $hts->id)}}">  <img src="{{$hts->getUrlAttribute()}}" alt="" class="img-thumbnail"></a>
             <p class="mt-4"> {{$hts['small-describe']}} </p>
+
             <p>Sukurta : {{date('Y-m-d', strtotime($hts['created_at']))}}</p>
-          
+            <button type="button" name="button" class="btn btn-primary btn-sm mb-4">Redaguoti</button>
+            <button type="button" name="button" class="btn btn-danger btn-sm mb-4">Ištrinti</button>
+
+
           </div>
 
         </div>
@@ -24,3 +28,5 @@
   </section>
 
 @endsection
+{{-- <button type="button" name="button" class="btn btn-primary btn-sm float-left mr-2 justify-bottom">Redaguoti</button>
+<button type="button" name="button" class="btn btn-danger btn-sm float-left">Ištrinti</button> --}}

@@ -43,7 +43,7 @@ class UtenaController extends Controller
     public function store(Request $request)
     {
       $validatedData = $request->validate([
-        'file_name'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'file_name'=>'image|mimes:jpeg,png,jpg,gif,svg|max:20000',
         'pond'=>'required|min:2',
         'small-describe'=>'required|min:10',
         'describe'=>'required|min:10',
