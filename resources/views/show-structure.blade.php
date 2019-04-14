@@ -4,7 +4,7 @@
 
 
 <section class="section-container">
-  <h1 class="mb-3">{{$utena['pond']}}</h1>
+  <h1 class="mb-3">{{$utena['pond']}}, {{$utena['district']}} rajonas</h1>
   <div class="row">
     <div class="col-6">
       <p class="text-justify"> {{$utena['describe']}} </p>
@@ -40,11 +40,12 @@
       @endforeach
     </div>
 
-    @if (Auth::check())
-    @if (Auth::user()->isAdmin())
+
 
     <div class="row">
       <div class="col-12">
+        @if (Auth::check())
+        @if (Auth::user()->isAdmin())
         <form class="form-horizontal mt-4" method="post" action="{{route('photo-store')}}" enctype="multipart/form-data">
           {!!csrf_field() !!}
           <div class="form-group">
@@ -63,10 +64,11 @@
             Saugoti
           </button>
         </form>
+      @endif
+      @endif
+        <a href="{{route('utena')}}" class="btn btn-primary btn-sm float-left ml-2">Grįžti</a>
       </div>
     </div>
-    @endif
-    @endif
 
 
 </section>

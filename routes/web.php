@@ -21,6 +21,7 @@ Route::get('/county-utena', 'UtenaController@index')->name('utena');
 Route::get('/create-structure', 'UtenaController@create')->middleware('IsAdmin');
 Route::post('/store', 'UtenaController@store')->name('utena-store')->middleware('IsAdmin');
 Route::get('/show-structure/{id}', 'UtenaController@show')->name('hts-show');
+Route::post('/destroy/{id}', 'UtenaController@destroy')->name('destroy');
 
 // Route::get('/test/{id}', 'TestController@index');
-Route::post('/store-photos', 'PhotosController@store')->name('photo-store');
+Route::post('/store-photos', 'PhotosController@store')->name('photo-store')->middleware('IsAdmin');

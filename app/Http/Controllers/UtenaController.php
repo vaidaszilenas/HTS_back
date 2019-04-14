@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Utena;
+use App\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
@@ -49,6 +50,7 @@ class UtenaController extends Controller
         'describe'=>'required|min:10',
         'district'=>'required'
       ]);
+      
 
       $path = $request->file('file_name')->storePublicly('public/images');
       $post = [
@@ -116,6 +118,11 @@ class UtenaController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $utena = Utena::findOrFail($id);
+      $utena->photo()->delete();
+      $utena::destroy($id);
+      Storage::disk('local')->delete($utena['file_name']);
+
+      return redirect()->back();
     }
 }

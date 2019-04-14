@@ -10,7 +10,7 @@
         <div class="col-sm-10">
           <input type="text" class="form-control" name="pond" value="{{old('pond')}}" placeholder="Įveskite tvenkinio pavadinimą">
           @if ($errors->has('pond'))
-          <span style="color:red;">{{$errors->first('pond')}}</span><br>
+          <span style="color:red;" class="float-left">Įveskite tvenkinio pavadinimą</span><br>
           @endif
         </div>
       </div>
@@ -33,7 +33,7 @@
         <div class="col-sm-10">
           <textarea class="form-control" name="small-describe" rows="5" placeholder="Įveskite tekstą">{{old('small-describe')}}</textarea>
           @if ($errors->has('small-describe'))
-          <span style="color:red;">{{$errors->first('small-describe')}}</span><br>
+          <span style="color:red;" class="float-left">Įveskite aprašymą</span><br>
           @endif
         </div>
       </div>
@@ -42,7 +42,7 @@
         <div class="col-sm-10">
           <textarea class="form-control" name="describe" rows="5" placeholder="Įveskite tekstą">{{old('describe')}}</textarea>
           @if ($errors->has('describe'))
-          <span style="color:red;">{{$errors->first('describe')}}</span><br>
+          <span style="color:red;" class="float-left">Įveskite aprašymą</span><br>
           @endif
         </div>
       </div>
@@ -51,7 +51,7 @@
         <div class="col-sm-10">
           <input style="padding-top: 5px;" id="image_url" type="file" class="" name="file_name" value=""><br>
           @if ($errors->has('file_name'))
-          <span style="color:red;">{{$errors->first('file_name')}}</span><br>
+          <span style="color:red;" class="float-left">Pridėkite paveikslėlį</span><br>
           @endif
         </div>
       </div>
