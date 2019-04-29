@@ -18,6 +18,7 @@
 
   <div class="tz-gallery">
     <div class="row mb-3">
+      <h5 class="col-12 text-left">Nuotraukos:</h5>
       @foreach ($utena->photo as $key)
       <?php
 
@@ -29,16 +30,112 @@
 
                 }
                 ?>
-      <div class="col-2">
-        <div class="card mt-2">
-          <a class="lightbox" href="{{url($photoUrl)}}">
-            <img src="{{url($photoUrl)}}" alt="Park" class="card-img-top img-fluid" style="max-height: 250px;">
-          </a>
-        </div>
-      </div>
-
+                <?php
+                    $data = explode('.', $photoUrl);
+                    $ext = end($data);
+                 ?>
+                @if ($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'gif' || $ext == 'svg')
+                  <div class="col-2">
+                    <div class="card mt-2">
+                      <a class="lightbox" href="{{url($photoUrl)}}">
+                        <img src="{{url($photoUrl)}}" alt="Park" class="card-img-top img-fluid" style="max-height: 250px;">
+                      </a>
+                    </div>
+                  </div>
+                @endif
       @endforeach
     </div>
+
+
+    <div id="accordion">
+
+  <div class="card">
+    <div class="card-header" style="background-color: #70d6e3; border-style: none;">
+      <a class="card-link" data-toggle="collapse" href="#collapseOne" style="color: black;">
+        Dokumentai
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row">
+        @foreach ($utena->photo as $key)
+        <?php
+
+                    if ($key->photo ) {
+                      $data = $key['photo'];
+                      $photoUrl = explode('/', $data);
+                      $photoUrl[0] = 'storage';
+                      $photoUrl = implode('/', $photoUrl);
+
+                  }
+                  ?>
+                  <?php
+                      $data = explode('.', $photoUrl);
+                      $ext = end($data);
+                   ?>
+                  @if ($ext == 'pdf')
+                    <div class="col-2">
+                      <div class="mt-2">
+                        <a class="lightbox" href="{{url($photoUrl)}}">
+                          <img src="{{asset('images/pdf.png')}}" alt="Park" class="card-img-top img-fluid" style="max-height: 150px;  max-width: 100px;">
+                        </a>
+                        <p><?php
+                          $title = explode('/', $data[0]);
+                          echo end($title);
+                         ?>
+                        </p>
+                      </div>
+                    </div>
+                  @endif
+        @endforeach
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="card mt-2">
+    <div class="card-header" style="background-color: #70d6e3;">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo" style="color: black;">
+      Vaizdo įrašai
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+      <div class="card-body" style="background-color: none;">
+        <div class="row">
+
+          @foreach ($utena->photo as $key)
+          <?php
+
+                      if ($key->photo ) {
+                        $data = $key['photo'];
+                        $photoUrl = explode('/', $data);
+                        $photoUrl[0] = 'storage';
+                        $photoUrl = implode('/', $photoUrl);
+
+                    }
+                    ?>
+                    <?php
+                        $data = explode('.', $photoUrl);
+                        $ext = end($data);
+                     ?>
+                    @if ($ext == 'mp4')
+
+                        <div class="col-4">
+                          <div class="card mt-2">
+                            <video src="{{url($photoUrl)}}" class="card-img-top img-fluid" style="max-height: 300px;" controls>
+
+                            </video>
+                          </div>
+                        </div>
+                    @endif
+          @endforeach
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 

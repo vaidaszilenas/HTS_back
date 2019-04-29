@@ -38,7 +38,7 @@ class PhotosController extends Controller
     {
 
       $validatedData = $this->validate($request,[
-        'photo.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:20000'
+        'photo.*' => 'mimes:jpeg,png,jpg,gif,svg,pdf,mp4|max:20000'
         ]);
 
       if ($request->hasFile('photo')) {

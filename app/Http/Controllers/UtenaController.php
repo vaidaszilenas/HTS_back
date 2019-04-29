@@ -50,7 +50,7 @@ class UtenaController extends Controller
         'describe'=>'required|min:10',
         'district'=>'required'
       ]);
-      
+
 
       $path = $request->file('file_name')->storePublicly('public/images');
       $post = [
