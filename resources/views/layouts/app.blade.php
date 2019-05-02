@@ -49,7 +49,7 @@
                 <a class="dropdown-item change-color" href="#">Tauragės apkr.</a>
                 <a class="dropdown-item change-color" href="#">Telšių apkr.</a>
                 <a class="dropdown-item change-color" href="{{route('utena')}}">Utenos apkr.</a>
-                <a class="dropdown-item change-color" href="#">Vilniaus apkr.</a>
+                <a class="dropdown-item change-color" href="{{route('vilnius')}}">Vilniaus apkr.</a>
 
               </div>
             </li>

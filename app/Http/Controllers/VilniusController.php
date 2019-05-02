@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Utena;
-use App\Photo;
+use App\Vilnius;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use DB;
 use View;
 
-class UtenaController extends Controller
+class VilniusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,10 +18,10 @@ class UtenaController extends Controller
      */
     public function index()
     {
-    
-        $utena = Utena::all();
 
-      return view('counties/utena',[
+        $utena = Vilnius::all();
+
+      return view('counties/vilnius',[
         'utena'=>$utena
       ]);
 
@@ -36,7 +35,7 @@ class UtenaController extends Controller
      */
     public function create()
     {
-        return view('create-structure');
+        return view('create-vilnius');
     }
 
     /**
@@ -66,11 +65,11 @@ class UtenaController extends Controller
 
       ];
       // var_dump($post);
-      Utena::create($post);
+      Vilnius::create($post);
       $post = $request->except('_token');
       // var_dump($post);
 
-      return redirect()->route('utena');
+      return redirect()->route('vilnius');
     }
 
     /**
@@ -82,9 +81,9 @@ class UtenaController extends Controller
     public function show($id)
     {
 
-      $utena = Utena::where('id', $id)->firstOrFail();
+      $utena = Vilnius::where('id', $id)->firstOrFail();
 
-      return View::make('show-structure')->with('utena', $utena);
+      return View::make('show-vilnius')->with('utena', $utena);
         // $utena = Utena::findOrFail($id);
         // return view('show-structure',[
         //   'utena' => $utena
@@ -122,8 +121,8 @@ class UtenaController extends Controller
      */
     public function destroy($id)
     {
-      $utena = Utena::findOrFail($id);
-      $utena->photo()->delete();
+      $utena = Vilnius::findOrFail($id);
+
       $utena::destroy($id);
       Storage::disk('local')->delete($utena['file_name']);
 

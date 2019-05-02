@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www":{"mount_options":["dmode=777","fmode=777","uid=1000","gid=1000"],"guestpath":"/var/www","hostpath":"/home/vaidas/Desktop/Laravel/HTS_back","disabled":false,"__vagrantfile":true}}}
