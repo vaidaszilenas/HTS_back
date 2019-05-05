@@ -19,14 +19,14 @@
         <label for="sel1" class="control-label ml-3 float-left">Rajonai:</label>
         <div class="col-sm-10">
           <select class="form-control" name="district">
-            <option value="Elektrėnų">Elektrėnų sav.</option>
-            <option value="Vilniaus miesto">Vilniaus miesto sav.</option>
-            <option value="Šalčininkų">Šalčininkų raj.</option>
-            <option value="Širvintų">Širvintų raj.</option>
-            <option value="Švenčionių">Švenčionių raj.</option>
-            <option value="Trakų">Trakų raj.</option>
-            <option value="Ukmergės">Ukmergės raj.</option>
-            <option value="Vilniaus">Vilniaus raj.</option>
+            <option value="Elektrėnų savivaldybė">Elektrėnų sav.</option>
+            <option value="Vilniaus miesto savivaldybė">Vilniaus miesto sav.</option>
+            <option value="Šalčininkų rajonas">Šalčininkų raj.</option>
+            <option value="Širvintų rajonas">Širvintų raj.</option>
+            <option value="Švenčionių rajonas">Švenčionių raj.</option>
+            <option value="Trakų rajonas">Trakų raj.</option>
+            <option value="Ukmergės rajonas">Ukmergės raj.</option>
+            <option value="Vilniaus rajonas">Vilniaus raj.</option>
           </select>
         </div>
       </div>

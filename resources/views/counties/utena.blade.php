@@ -9,7 +9,7 @@
         <div class="col-3 col-sm-4">
           <div class="section-border">
 
-            <h4>{{$hts['pond']}} <br> {{$hts['district']}} raj.</h4>
+            <h4>{{$hts['pond']}} <br> {{$hts['district']}}</h4>
             <a href="{{route('hts-show', $hts->id)}}">  <img src="{{$hts->getUrlAttribute()}}" alt="" class="img-thumbnail"></a>
             <p class="mt-4"> {{$hts['small-describe']}} </p>
 

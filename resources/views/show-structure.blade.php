@@ -4,7 +4,7 @@
 
 
 <section class="section-container">
-  <h1 class="mb-3">{{$utena['pond']}}, {{$utena['district']}} rajonas</h1>
+  <h1 class="mb-3">{{$utena['pond']}}, {{$utena['district']}}</h1>
   <div class="row">
     <div class="col-6">
       <p class="text-justify"> {{$utena['describe']}} </p>
@@ -138,15 +138,14 @@
 
 
 
-
+@if (Auth::check())
+@if (Auth::user()->isAdmin())
     <div class="row">
       <div class="col-12">
-        @if (Auth::check())
-        @if (Auth::user()->isAdmin())
         <form class="form-horizontal mt-4" method="post" action="{{route('photo-store')}}" enctype="multipart/form-data">
           {!!csrf_field() !!}
           <div class="form-group">
-            <label for="image_url" class="control-label text-left col-12 p-0">Pridėkite daugiau nuotraukų</label>
+            <label for="image_url" class="control-label text-left col-12 p-0">Pridėkite daugiau nuotraukų / dokumentų / vaizdo įrašų</label>
             <div class="col-12 clearfix p-0">
               <input style="padding-top: 5px;" id="image_url" type="file" multiple='true' class="float-left" name="photo[]" value=""><br>
               @if ($errors->has('photo.*'))
@@ -161,11 +160,11 @@
             Saugoti
           </button>
         </form>
-      @endif
-      @endif
         <a href="{{route('utena')}}" class="btn btn-primary btn-sm float-left ml-2">Grįžti</a>
       </div>
     </div>
+  @endif
+  @endif
 
 
 </section>

@@ -15,7 +15,7 @@ class CreateHtsStructures extends Migration
     {
         Schema::create('utena', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unsigned();
             $table->string('pond');
             $table->text('small-describe');
             $table->text('describe');

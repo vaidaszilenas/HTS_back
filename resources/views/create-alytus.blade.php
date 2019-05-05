@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
-    <form class="form-horizontal" method="post" action="{{route('utena-store')}}" enctype="multipart/form-data">
+    <form class="form-horizontal" method="post" action="{{route('alytus-store')}}" enctype="multipart/form-data">
       {!!csrf_field() !!}
       <div class="form-group">
         <label for="title" class="control-label ml-3 float-left">Tvenkinys</label>
@@ -19,11 +19,11 @@
         <label for="sel1" class="control-label ml-3 float-left">Rajonai:</label>
         <div class="col-sm-10">
           <select class="form-control" name="district">
-            <option value="Anykščių rajonas">Anykščių raj.</option>
-            <option value="Ignalinos rajonas">Ignalinos raj.</option>
-            <option value="Molėtų rajonas">Molėtų raj.</option>
-            <option value="Utenos rajonas">Utenos raj.</option>
-            <option value="Zarasų rajonas">Zarasų raj.</option>
+            <option value="Alytaus miesto savivaldybė">Alytaus miesto sav.</option>
+            <option value="Alytaus rajonas">Alytaus raj.</option>
+            <option value="Lazdijų rajonas">Lazdijų raj.</option>
+            <option value="Druskininkų savivaldybė">Druskininkų sav.</option>
+            <option value="Varėnos rajonas">Varėnos raj.</option>
           </select>
         </div>
       </div>
@@ -59,7 +59,7 @@
         Saugoti
       </button>
 
-      <a href="{{'/county-utena'}}" class="btn btn-danger float-left ml-1">
+      <a href="{{'/county-alytus'}}" class="btn btn-danger float-left ml-1">
         Grįžti
       </a>
 

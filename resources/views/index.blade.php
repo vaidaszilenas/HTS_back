@@ -39,16 +39,16 @@
                   Hidrotechnikos statiniai
                 </a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item change-color" href="#">Alytaus apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Kauno apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Klaipėdos apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Marijampolės apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Panevėžio apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Šiaulių apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Tauragės apkr.</a>
-                  <a class="dropdown-item change-color" href="#">Telšių apkr.</a>
-                  <a class="dropdown-item change-color" href="{{route('utena')}}">Utenos apkr.</a>
-                  <a class="dropdown-item change-color" href="{{route('vilnius')}}">Vilniaus apkr.</a>
+                  <a class="dropdown-item change-color" href="{{route('alytus')}}">Alytaus apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('kaunas')}}">Kauno apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('klaipeda')}}">Klaipėdos apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('marijampole')}}">Marijampolės apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('panevezys')}}">Panevėžio apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('siauliai')}}">Šiaulių apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('taurage')}}">Tauragės apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('telsiai')}}">Telšių apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('utena')}}">Utenos apskr.</a>
+                  <a class="dropdown-item change-color" href="{{route('vilnius')}}">Vilniaus apskr.</a>
                 </div>
               </li>
               <li class="nav-item">

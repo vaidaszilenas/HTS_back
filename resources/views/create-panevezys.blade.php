@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
-    <form class="form-horizontal" method="post" action="{{route('utena-store')}}" enctype="multipart/form-data">
+    <form class="form-horizontal" method="post" action="{{route('panevezys-store')}}" enctype="multipart/form-data">
       {!!csrf_field() !!}
       <div class="form-group">
         <label for="title" class="control-label ml-3 float-left">Tvenkinys</label>
@@ -19,11 +19,12 @@
         <label for="sel1" class="control-label ml-3 float-left">Rajonai:</label>
         <div class="col-sm-10">
           <select class="form-control" name="district">
-            <option value="Anykščių rajonas">Anykščių raj.</option>
-            <option value="Ignalinos rajonas">Ignalinos raj.</option>
-            <option value="Molėtų rajonas">Molėtų raj.</option>
-            <option value="Utenos rajonas">Utenos raj.</option>
-            <option value="Zarasų rajonas">Zarasų raj.</option>
+            <option value="Panevėžio miesto savivaldybė">Panvėžio miesto sav.</option>
+            <option value="Panevėžio rajonas">Panevėžio raj.</option>
+            <option value="Pasvalio rajonas">Pasvalio raj.</option>
+            <option value="Biržų rajonas">Biržų raj.</option>
+            <option value="Rokiškio rajonas">Rokiškio raj.</option>
+            <option value="Kupiškio rajonas">Kupiškio raj.</option>
           </select>
         </div>
       </div>
@@ -59,7 +60,7 @@
         Saugoti
       </button>
 
-      <a href="{{'/county-utena'}}" class="btn btn-danger float-left ml-1">
+      <a href="{{'/county-panevezys'}}" class="btn btn-danger float-left ml-1">
         Grįžti
       </a>
 

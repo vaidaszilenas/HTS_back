@@ -16,7 +16,7 @@ class AddPhoto extends Migration
       Schema::create('photos', function (Blueprint $table) {
 
           $table->engine = 'InnoDB';
-          $table->bigIncrements('id');
+          $table->bigIncrements('id')->unsigned();
           $table->string('photo');
           $table->integer('utena_id')->unsigned()->nullable();
           $table->foreign('utena_id')->references('id')->on('utena')->onDelete('cascade');
