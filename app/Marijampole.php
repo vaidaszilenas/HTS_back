@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\MarijampolePhoto;
 
 class Marijampole extends Model
 {
   public function photo() {
-    return $this->hasMany('App\Photo'); //  or whatever your namespace is
+    return $this->hasMany('App\MarijampolePhoto'); //  or whatever your namespace is
   }
 
  protected $fillable = ['pond', 'small-describe', 'describe', 'district', 'file_name'];

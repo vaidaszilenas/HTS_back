@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\VilniusPhoto;
 
 class Vilnius extends Model
 {
   public function photo() {
-    return $this->hasMany('App\Photo'); //  or whatever your namespace is
+    return $this->hasMany('App\VilniusPhoto'); //  or whatever your namespace is
   }
 
  protected $fillable = ['pond', 'small-describe', 'describe', 'district', 'file_name'];

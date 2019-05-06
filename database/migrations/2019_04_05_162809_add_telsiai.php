@@ -15,7 +15,7 @@ class AddTelsiai extends Migration
      {
          Schema::create('telsiai', function (Blueprint $table) {
              $table->engine = 'InnoDB';
-             $table->bigIncrements('id');
+             $table->increments('id')->unsigned();
              $table->string('pond');
              $table->text('small-describe');
              $table->text('describe');

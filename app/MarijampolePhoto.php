@@ -3,15 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Utena;
+use App\MarijampolePhoto;
 
-class Photo extends Model
+class MarijampolePhoto extends Model
 {
   // public function utena() {
   //   return $this->belongsTo('App\Utena'); //  or whatever your namespace is
   // }
-  protected $fillable = ['photo', 'utena_id'];
-  protected $table = 'utena_photos';
+  protected $fillable = ['photo', 'marijampole_id'];
+  protected $table = 'marijampole_photos';
 
   public function getUrlAttribute()
  {

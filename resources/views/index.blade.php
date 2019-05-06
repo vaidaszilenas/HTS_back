@@ -130,25 +130,25 @@
       <div class="row">
         <div class="col-md  text-center">
           <div class="contacts">
-            <i class="far fa-address-card"></i><span> Vytauto Didžiojo universitetas, Kaunas</span>
+            <i class="far fa-address-card"></i><span> Vytauto Didžiojo universitetas</span>
           </div>
           <div class="contacts">
-            <i class="fas fa-phone-volume"></i><span> +370 600 44 555</span><br>
+            <i class="fas fa-phone-volume"></i><span> (8 37) 752 324</span><br>
           </div>
           <div class="contacts">
-            <i class="far fa-envelope"></i><span> universitetas@vdu.lt</span>
+            <i class="far fa-envelope"></i><span> vuzf@vdu.lt</span>
           </div>
           <div class="icons">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.facebook.com/vytauto.didziojo.universitetas/"><i class="fab fa-facebook-square"></i></a>
           </div>
           <div class="icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com/vmulive?lang=en"><i class="fab fa-twitter"></i></a>
           </div>
           <div class="icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/vduni/?hl=en"><i class="fab fa-instagram"></i></a>
           </div>
           <div class="icons">
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/channel/UCbgJJ1Zp9GZ0DUX2M3zyuCA"><i class="fab fa-youtube"></i></a>
           </div>
 
         </div>

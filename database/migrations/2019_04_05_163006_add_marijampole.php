@@ -15,7 +15,7 @@ class AddMarijampole extends Migration
      {
          Schema::create('marijampole', function (Blueprint $table) {
              $table->engine = 'InnoDB';
-             $table->bigIncrements('id');
+             $table->increments('id')->unsigned();
              $table->string('pond');
              $table->text('small-describe');
              $table->text('describe');

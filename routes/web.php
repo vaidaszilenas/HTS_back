@@ -25,6 +25,15 @@ Route::post('/destroy-utena/{id}', 'UtenaController@destroy')->name('destroy-ute
 
 // Route::get('/test/{id}', 'TestController@index');
 Route::post('/store-photos', 'PhotosController@store')->name('photo-store')->middleware('IsAdmin');
+Route::post('/store-vilnius-photos', 'VilniusPhotosController@store')->name('vilniusphoto-store')->middleware('IsAdmin');
+Route::post('/store-telsiai-photos', 'TelsiaiPhotosController@store')->name('telsiaiphoto-store')->middleware('IsAdmin');
+Route::post('/store-taurage-photos', 'TauragePhotosController@store')->name('tauragephoto-store')->middleware('IsAdmin');
+Route::post('/store-siauliai-photos', 'SiauliaiPhotosController@store')->name('siauliaiphoto-store')->middleware('IsAdmin');
+Route::post('/store-panevezys-photos', 'PanevezysPhotosController@store')->name('panevezysphoto-store')->middleware('IsAdmin');
+Route::post('/store-marijampole-photos', 'MarijampolePhotosController@store')->name('marijampolephoto-store')->middleware('IsAdmin');
+Route::post('/store-klaipeda-photos', 'KlaipedaPhotosController@store')->name('klaipedaphoto-store')->middleware('IsAdmin');
+Route::post('/store-kaunas-photos', 'KaunasPhotosController@store')->name('kaunasphoto-store')->middleware('IsAdmin');
+Route::post('/store-alytus-photos', 'AlytusPhotosController@store')->name('alytusphoto-store')->middleware('IsAdmin');
 
 
 //Vilniaus
