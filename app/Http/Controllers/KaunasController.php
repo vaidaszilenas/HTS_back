@@ -19,7 +19,7 @@ class KaunasController extends Controller
      public function index()
      {
 
-         $utena = Kaunas::all();
+         $utena = Kaunas::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/kaunas',[
          'utena'=>$utena

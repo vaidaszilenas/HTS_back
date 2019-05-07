@@ -19,7 +19,7 @@ class AlytusController extends Controller
      public function index()
      {
 
-         $utena = Alytus::all();
+         $utena = Alytus::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/alytus',[
          'utena'=>$utena

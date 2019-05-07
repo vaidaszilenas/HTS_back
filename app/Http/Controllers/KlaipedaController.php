@@ -19,7 +19,7 @@ class KlaipedaController extends Controller
      public function index()
      {
 
-         $utena = Klaipeda::all();
+         $utena = Klaipeda::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/klaipeda',[
          'utena'=>$utena

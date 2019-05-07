@@ -6,7 +6,7 @@
       <h1 class="mb-2">Vilniaus apskritis</h1>
       <div class="row">
         @foreach ($utena as $hts)
-        <div class="col-3 col-sm-4">
+        <div class="col-sm-3 mb-4">
           <div class="section-border">
 
             <h4>{{$hts['pond']}} <br> {{$hts['district']}}</h4>
@@ -29,11 +29,21 @@
       @endforeach
 
     </div>
-    @if (Auth::check())
-    @if (Auth::user()->isAdmin())
-    <a href="{{'/create-vilnius'}}" class="btn btn-success btn-sm float-left mr-2 mt-4 mb-4">Sukurti naują HTS statinį</a>
-  @endif
-  @endif
+
+  <div class="row">
+    <div class="col-sm-12">
+      @if (Auth::check())
+      @if (Auth::user()->isAdmin())
+      <a href="{{'/create-vilnius'}}" class="btn btn-primary btn-sm float-left mr-2 mt-4 mb-4">Sukurti naują HTS statinį</a>
+    @endif
+    @endif
+      <ul class="pagination pagination-sm mt-4 pl-2">
+        {{$utena->links()}}
+      </ul>
+    </div>
+
+  </div>
+
   </section>
 
 @endsection

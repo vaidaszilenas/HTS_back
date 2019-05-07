@@ -19,7 +19,7 @@ class PanevezysController extends Controller
      public function index()
      {
 
-         $utena = Panevezys::all();
+         $utena = Panevezys::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/panevezys',[
          'utena'=>$utena

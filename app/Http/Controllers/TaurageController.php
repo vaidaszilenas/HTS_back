@@ -19,7 +19,7 @@ class TaurageController extends Controller
      public function index()
      {
 
-         $utena = Taurage::all();
+         $utena = Taurage::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/taurage',[
          'utena'=>$utena

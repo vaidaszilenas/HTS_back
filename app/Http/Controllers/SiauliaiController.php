@@ -19,7 +19,7 @@ class SiauliaiController extends Controller
      public function index()
      {
 
-         $utena = Siauliai::all();
+         $utena = Siauliai::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/siauliai',[
          'utena'=>$utena

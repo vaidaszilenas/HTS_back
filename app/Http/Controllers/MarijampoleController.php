@@ -19,7 +19,7 @@ class MarijampoleController extends Controller
      public function index()
      {
 
-         $utena = Marijampole::all();
+         $utena = Marijampole::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/marijampole',[
          'utena'=>$utena

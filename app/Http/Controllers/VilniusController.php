@@ -19,7 +19,7 @@ class VilniusController extends Controller
     public function index()
     {
 
-        $utena = Vilnius::all();
+        $utena = Vilnius::orderby('created_at', 'desc')->paginate(12);
 
       return view('counties/vilnius',[
         'utena'=>$utena

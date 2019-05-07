@@ -7,6 +7,12 @@ body{
   overflow-x: hidden;
 }
 
+.page-item{
+  margin-left: 0px !important;
+  
+}
+
+
 
 .mobile_icon{
   border: 1px solid white;

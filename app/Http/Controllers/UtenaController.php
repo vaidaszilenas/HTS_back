@@ -20,7 +20,7 @@ class UtenaController extends Controller
     public function index()
     {
 
-        $utena = Utena::all();
+        $utena = Utena::orderby('pond', 'asc')->paginate(12);
 
       return view('counties/utena',[
         'utena'=>$utena

@@ -19,7 +19,7 @@ class TelsiaiController extends Controller
      public function index()
      {
 
-         $utena = Telsiai::all();
+         $utena = Telsiai::orderby('created_at', 'desc')->paginate(12);
 
        return view('counties/telsiai',[
          'utena'=>$utena

@@ -4,7 +4,7 @@
 
 
 <section class="section-container">
-  <h1 class="mb-3">{{$utena['pond']}}, {{$utena['district']}}</h1>
+  <h1 class="mb-3">{{$utena['pond']}} {{$utena['district']}}</h1>
   <div class="row">
     <div class="col-6">
       <p class="text-justify"> {{$utena['describe']}} </p>
