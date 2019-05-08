@@ -34,11 +34,11 @@
                     $data = explode('.', $photoUrl);
                     $ext = end($data);
                  ?>
-                @if ($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'gif' || $ext == 'svg')
+                @if ($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'gif' || $ext == 'svg' || $ext == 'JPG')
                   <div class="col-2">
                     <div class="card mt-2">
                       <a class="lightbox" href="{{url($photoUrl)}}">
-                        <img src="{{url($photoUrl)}}" alt="Park" class="card-img-top img-fluid" style="max-height: 250px;">
+                        <img src="{{url($photoUrl)}}" alt="Park" class="card-imgtop " style="max-height: 140px;">
                       </a>
                     </div>
                   </div>
