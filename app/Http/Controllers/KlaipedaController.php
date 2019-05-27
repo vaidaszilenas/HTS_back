@@ -122,7 +122,12 @@ class KlaipedaController extends Controller
      public function destroy($id)
      {
        $utena = Klaipeda::findOrFail($id);
-
+       if ($utena == true) {
+         foreach ($utena['photo'] as $key) {
+           var_dump($key['photo']);
+           Storage::disk('local')->delete($key['photo']);
+         }
+       }
        $utena::destroy($id);
        Storage::disk('local')->delete($utena['file_name']);
 

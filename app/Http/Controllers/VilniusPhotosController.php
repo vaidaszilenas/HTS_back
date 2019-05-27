@@ -45,8 +45,10 @@ class VilniusPhotosController extends Controller
 
          foreach ($request->photo as $photo) {
 
+           $randomNumber = rand();
            $filename = $photo->getClientOriginalName();
-           $path = $photo->storeAs('public/images', $filename);
+           $name = $randomNumber . '_' . $filename;
+           $path = $photo->storeAs('public/images', $name);
            $post = [
              'photo'=> $path,
              'vilnius_id' => $request['vilnius_id']

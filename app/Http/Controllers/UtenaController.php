@@ -123,7 +123,12 @@ class UtenaController extends Controller
     public function destroy($id)
     {
       $utena = Utena::findOrFail($id);
-      $utena->photo()->delete();
+      if ($utena == true) {
+        foreach ($utena['photo'] as $key) {
+          var_dump($key['photo']);
+          Storage::disk('local')->delete($key['photo']);
+        }
+      }
       $utena::destroy($id);
       Storage::disk('local')->delete($utena['file_name']);
 

@@ -45,8 +45,10 @@ class AlytusPhotosController extends Controller
 
          foreach ($request->photo as $photo) {
 
+           $randomNumber = rand();
            $filename = $photo->getClientOriginalName();
-           $path = $photo->storeAs('public/images', $filename);
+           $name = $randomNumber . '_' . $filename;
+           $path = $photo->storeAs('public/images', $name);
            $post = [
              'photo'=> $path,
              'alytus_id' => $request['alytus_id']

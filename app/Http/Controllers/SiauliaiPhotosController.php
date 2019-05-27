@@ -44,9 +44,10 @@ class SiauliaiPhotosController extends Controller
        if ($request->hasFile('photo')) {
 
          foreach ($request->photo as $photo) {
-
+           $randomNumber = rand();
            $filename = $photo->getClientOriginalName();
-           $path = $photo->storeAs('public/images', $filename);
+           $name = $randomNumber . '_' . $filename;
+           $path = $photo->storeAs('public/images', $name);
            $post = [
              'photo'=> $path,
              'siauliai_id' => $request['siauliai_id']

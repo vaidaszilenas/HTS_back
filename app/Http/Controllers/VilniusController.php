@@ -121,10 +121,17 @@ class VilniusController extends Controller
      */
     public function destroy($id)
     {
-      $utena = Vilnius::findOrFail($id);
 
+      $utena = Vilnius::findOrFail($id);
+      if ($utena == true) {
+        foreach ($utena['photo'] as $key) {
+          var_dump($key['photo']);
+          Storage::disk('local')->delete($key['photo']);
+        }
+      }
       $utena::destroy($id);
       Storage::disk('local')->delete($utena['file_name']);
+
 
       return redirect()->back();
     }
